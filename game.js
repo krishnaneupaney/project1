@@ -1,3 +1,7 @@
+
+prompt('Have you over wonder what it takes to serve your country?', 'yes/no')
+alert('Awesome- click Start below to get started')
+
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
@@ -98,12 +102,11 @@ function youQualify() {
 
 const questions = [
   {
-    question: 'What is weight in range below?',
+    question: 'Are you U.S. Citizen or Permanent resident?',
     anss: [
-      { text: '100-150 pounds', correct: false },
-      { text: '150-200 pounds', correct: false },
-      { text: '250-300 pounds', correct: true },
-      { text: '300-350 pounds', correct: false }
+      { text: 'Yes', correct: true },
+      { text: 'NO', correct: false },
+     
     ]
   },
   {
@@ -134,6 +137,14 @@ const questions = [
     ]
   },
 ]
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 
 // restartGame.addEventListener('click', showResults);
 

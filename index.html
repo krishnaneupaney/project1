@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Military App</title>
+    <title>Can I join Military?</title>
     <iframe width="0" height="0" src="armytheme.mp3"frameborder="0" allowfullscreen></iframe>
     <link rel="stylesheet" href="game.css">
     <script defer src="game.js"></script>
+    <style>
+ body {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+* {box-sizing: border-box;}
+     </style>
 </head>
 <body>
+    <button class="open-button" onclick="openForm()">Not Qualified? Click Here</button>
+    
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Enter your name and address for free Protein Bar</h1>
+    
+        <label for="email"><b>Name</b></label>
+        <input type="text" placeholder="Enter name" name="email" required>
+    
+        <label for="psw"><b>Adress</b></label>
+        <input type="password" placeholder="Enter address" name="psw" required>
+    
+        <button type="submit" class="btn">Get Delivered</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    
 <div class="container">
     <div id="question-container" class="hide">
     <div id="question">Question</div>
@@ -22,7 +43,7 @@
     </div>
     <header>
      <div class="controls">
-        <button id="start-btn" class="start-btn btn">Start Game</button>
+        <button id="start-btn" class="start-btn btn">Start</button>
         <button id="next-btn" class="next-btn btn hide">Next</button>
         <div id="results"></div>
         </div>
